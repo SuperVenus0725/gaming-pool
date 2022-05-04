@@ -1,0 +1,20 @@
+# pull official base image
+FROM python:3.8.4-alpine
+RUN echo "Test Engine Ver 1.0"
+# set work directory
+WORKDIR /usr/src/app
+COPY artifacts .
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+RUN pip install --upgrade pip
+RUN pip --version
+COPY load_testing/requirements.txt .
+COPY load_testing/core .
+COPY load_testing/main.py .
+COPY load_testing/json .
+RUN pip install -r requirements.txt
+# copy project
+COPY load_testing .

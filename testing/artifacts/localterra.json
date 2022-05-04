@@ -1,0 +1,19 @@
+{
+  "adminWallet": "terra1ttjw6nscdmkrx3zhxqx3md37phldgwhggm345k",
+  "authLiquidityProvider": "terra10hcplx9hx7fyecgmhfyrzgd4zfd9t200wlduxn",
+  "defaultLPTokenHolder": "terra1d5tgzmy6wd23r3d7hn3mqp53gk7w0a8qrs7gvm",
+  "furyTokenCodeId": 1,
+  "furyContractAddress": "terra18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5",
+  "pairCodeId": 2,
+  "stakingCodeId": 3,
+  "stakingAddress": "terra174kgn5rtw4kf6f938wm7kwh70h2v4vcfd26jlc",
+  "xastroAddress": "terra18r5szma8hm93pvx6lwpjwyxruw27e0k562a3kc",
+  "whitelistCodeId": 4,
+  "factoryCodeId": 5,
+  "factoryAddress": "terra1plju286nnfj3z54wgcggd4enwaa9fgf5kgrgzl",
+  "proxyCodeId": 6,
+  "proxyContractAddress": "terra19zpyd046u4swqpksr3n44cej4j8pg6ah2y6dcg",
+  "poolPairContractAddress": "terra1gv07846a3867ezn3uqkk082c5ftke7hpemzu9q",
+  "poolLpTokenAddress": "terra1sfhqgl8skca0gjsxvremdalsx2antn8yrs2p3q",
+  "poolpairSavedToProxy": true
+}

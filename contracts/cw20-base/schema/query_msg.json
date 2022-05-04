@@ -1,0 +1,277 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QueryMsg",
+  "anyOf": [
+    {
+      "description": "Returns the current balance of the given address, 0 if unset. Return type: BalanceResponse.",
+      "type": "object",
+      "required": [
+        "balance"
+      ],
+      "properties": {
+        "balance": {
+          "type": "object",
+          "required": [
+            "address"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Returns metadata on the contract - name, decimals, supply, etc. Return type: TokenInfoResponse.",
+      "type": "object",
+      "required": [
+        "token_info"
+      ],
+      "properties": {
+        "token_info": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Only with \"mintable\" extension. Returns who can mint and the hard cap on maximum tokens after minting. Return type: MinterResponse.",
+      "type": "object",
+      "required": [
+        "minter"
+      ],
+      "properties": {
+        "minter": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Only with \"allowance\" extension. Returns how much spender can use from owner account, 0 if unset. Return type: AllowanceResponse.",
+      "type": "object",
+      "required": [
+        "allowance"
+      ],
+      "properties": {
+        "allowance": {
+          "type": "object",
+          "required": [
+            "owner",
+            "spender"
+          ],
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "spender": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Only with \"enumerable\" extension (and \"allowances\") Returns all allowances this owner has approved. Supports pagination. Return type: AllAllowancesResponse.",
+      "type": "object",
+      "required": [
+        "all_allowances"
+      ],
+      "properties": {
+        "all_allowances": {
+          "type": "object",
+          "required": [
+            "owner"
+          ],
+          "properties": {
+            "limit": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "uint32",
+              "minimum": 0.0
+            },
+            "owner": {
+              "type": "string"
+            },
+            "start_after": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Only with \"enumerable\" extension Returns all accounts that have balances. Supports pagination. Return type: AllAccountsResponse.",
+      "type": "object",
+      "required": [
+        "all_accounts"
+      ],
+      "properties": {
+        "all_accounts": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "uint32",
+              "minimum": 0.0
+            },
+            "start_after": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Only with \"marketing\" extension Returns more metadata on the contract to display in the client: - description, logo, project url, etc. Return type: MarketingInfoResponse",
+      "type": "object",
+      "required": [
+        "marketing_info"
+      ],
+      "properties": {
+        "marketing_info": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Only with \"marketing\" extension Downloads the mbeded logo data (if stored on chain). Errors if no logo data ftored for this contract. Return type: DownloadLogoResponse.",
+      "type": "object",
+      "required": [
+        "download_logo"
+      ],
+      "properties": {
+        "download_logo": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Checks whether the given address is in the Restricted Wallet List, Return type: boolean",
+      "type": "object",
+      "required": [
+        "is_restricted_wallet"
+      ],
+      "properties": {
+        "is_restricted_wallet": {
+          "type": "object",
+          "required": [
+            "address"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Checks whether the given address is in the Restricted Contract List, Return type: boolean",
+      "type": "object",
+      "required": [
+        "is_restricted_contract"
+      ],
+      "properties": {
+        "is_restricted_contract": {
+          "type": "object",
+          "required": [
+            "address"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Returns the list of wallet addresses in the Restricted Wallet List",
+      "type": "object",
+      "required": [
+        "restricted_wallet_list"
+      ],
+      "properties": {
+        "restricted_wallet_list": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Returns the list of contract addresses in the Restricted Contract List",
+      "type": "object",
+      "required": [
+        "restricted_contract_list"
+      ],
+      "properties": {
+        "restricted_contract_list": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Returns the Timestamp, when the Restrictions shall expire",
+      "type": "object",
+      "required": [
+        "restricted_list_timestamp"
+      ],
+      "properties": {
+        "restricted_list_timestamp": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "whitelist_restriction"
+      ],
+      "properties": {
+        "whitelist_restriction": {
+          "type": "object",
+          "required": [
+            "contract_address",
+            "contract_check_needed",
+            "wallet_address"
+          ],
+          "properties": {
+            "contract_address": {
+              "type": "string"
+            },
+            "contract_check_needed": {
+              "type": "boolean"
+            },
+            "wallet_address": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

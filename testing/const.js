@@ -1,0 +1,7 @@
+export let fury_contract_address = "terra1zjthyw8e8jayngkvg5kddccwa9v46s4w9sq2pq"
+export let proxy_contract_address = "terra17z8hs6xyfdpsyf564xkjwfwp423zkkam6hquh5"
+export let liquidity_wallet = "terra1d5tgzmy6wd23r3d7hn3mqp53gk7w0a8qrs7gvm"
+export let bonded_lp_reward_wallet = "terra1xqqf9ktwhkpdfey9quwchpkhc4u4vesqaz772u"
+export let treasury_wallet = "terra10hcplx9hx7fyecgmhfyrzgd4zfd9t200wlduxn"
+export let auth_liquidity_provider = "terra1d5tgzmy6wd23r3d7hn3mqp53gk7w0a8qrs7gvm"
+export let pool_pair_address = ""

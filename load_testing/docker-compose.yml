@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: ../
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+    networks:
+      - localterra_terra
+
+networks:
+  localterra_terra:
+    external: true
