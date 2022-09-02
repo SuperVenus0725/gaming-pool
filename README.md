@@ -1,6 +1,7 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Gaming pool contract based on the sport result.
+
 
 ### What is this repository for? ###
 
